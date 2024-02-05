@@ -18,6 +18,15 @@ Funcionalidade: Cadastro no site adopet
 
  Regra de negócio: email e senha obrigatórios
 
+ Cenário: Falha na tentativa de cadastro
+
+    Dado que o usuário acessa a página de cadastro
+    Quando o usuário não insere valores nos campos obrigatórios, como nome, email, senha e confirmação de senha
+    E o usuário clica no botão de cadastro
+    Então o usuário visualiza mensagem de erro
+    
+ Regra de negócio: email e senha obrigatórios
+
 
  Cenário: Falha na tentativa de cadastro
 
