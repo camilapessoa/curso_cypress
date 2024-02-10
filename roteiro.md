@@ -50,12 +50,14 @@ Funcionalidade: Cadastro no site adopet
 
 Funcionalidade: login no aplicativo
 
-  Cenário: Login no aplicativo com sucesso
+  Cenário: Falha no login do sistema
     Dado que o usuário acessa a página de login
-    Quando o usuário insere seu email "usuarioteste" e senha "Senha123"
+    Quando o usuário insere um email e senha fora do padrão aceito
     E clica no botão de login
-    Então o usuário é redirecionado para a página inicial
-    E o usuário vê a mensagem de boas-vindas "Bem-vindo, Usuário!"
+    Então o usuário visualiza mensagem "Por favor, verifique o email digitado" e "A senha deve conter pelo menos uma letra maiúscula, um número e ter entre 6 e 15 caracteres"
+
+  Regra de negócio: email deve ter um formato válido e senha deve contar  pelo menos uma letra maiúscula, um número e ter entre 6 e 15 caracteres
+  
 
   Cenário: Falha no Login 
     Dado que o usuário acessa a página de login
