@@ -41,10 +41,10 @@ Funcionalidade: Cadastro no site adopet
   Cenário: Falha na tentativa de cadastro
 
     Dado que o usuário acessa a página de cadastro
-    Quando o usuário não insere algum dos campos obrigatórios, como nome, email, senha e confirmação de senha
+    Quando o usuário insere incorretamente algum dos campos obrigatórios, como nome, email, senha e confirmação de senha
     E clica no botão cadastrar
     Então o usuário não é cadastrado 
-    E o usuário visualiza mensagem de erro
+    E o usuário visualiza mensagem de erro com especificações de entrada
 
  Regra de negócio: email e senha obrigatórios
 
@@ -59,12 +59,18 @@ Funcionalidade: login no aplicativo
   Regra de negócio: email deve ter um formato válido e senha deve contar  pelo menos uma letra maiúscula, um número e ter entre 6 e 15 caracteres
   
 
-  Cenário: Falha no Login 
+  Cenário: Sucesso no Login 
     Dado que o usuário acessa a página de login
     Quando o usuário insere seu email "usuarioteste" e senha "Senha123"
     E clica no botão de login
     Então o usuário é redirecionado para a página inicial
     E o usuário vê a mensagem de boas-vindas "Bem-vindo, Usuário!"
+
+  Cenário: Falha no Login 
+    Dado que o usuário acessa a página de login
+    Quando o usuário insere email ou senha não cadastrado
+    E clica no botão de login
+    Então o usuário usuário recebe a mensagem "Falha no login. Consulte suas credenciais."
 
   Cenário: Realizar uma busca no aplicativo
     Dado que o usuário está logado no aplicativo
