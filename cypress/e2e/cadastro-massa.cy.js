@@ -4,14 +4,12 @@ describe('Página de cadastro', () => {
 
     beforeEach(() => {
          cy.visit('https://adopet-frontend-iota.vercel.app/');
-        cy.get('[data-test="register-button"]').click();
-     
+         cy.get('[data-test="register-button"]').click();
+             
     })
-        
+       usuarios.forEach(usuario => { 
         it('Deve preencher os campos do formulário corretamente para cadastrar um novo usuário', () => {
-
-        usuarios.forEach((usuario) => {
-
+            
             cy.get('[data-test="input-name"]').clear().type(usuario.name);
             cy.get('[data-test="input-email"]').clear().type(usuario.email);
             cy.get('[data-test="input-password"]').clear().type(usuario.password);
@@ -19,8 +17,8 @@ describe('Página de cadastro', () => {
             cy.get('[data-test="submit-button"]').click();
 
         })
-         
-     })
+     })          
 })
+
 
    
