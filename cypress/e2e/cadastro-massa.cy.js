@@ -10,11 +10,13 @@ describe('Página de cadastro', () => {
        usuarios.forEach(usuario => { 
         it('Deve preencher os campos do formulário corretamente para cadastrar um novo usuário', () => {
             
-            cy.get('[data-test="input-name"]').clear().type(usuario.name);
-            cy.get('[data-test="input-email"]').clear().type(usuario.email);
-            cy.get('[data-test="input-password"]').clear().type(usuario.password);
-            cy.get('[data-test="input-confirm-password"]').clear().type(usuario.password);
+            cy.get('[data-test="input-name"]').focus().clear().type(usuario.name);
+            cy.get('[data-test="input-email"]').focus().clear().type(usuario.email);
+            cy.get('[data-test="input-password"]').focus().clear().type(usuario.password);
+            cy.get('[data-test="input-confirm-password"]').focus().clear().type(usuario.password);
             cy.get('[data-test="submit-button"]').click();
+
+            cy.wait(1000)
 
         })
      })          
