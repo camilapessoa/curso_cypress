@@ -13,4 +13,4 @@ describe('Página de cadastro', () => {
             Cadastro.submeterCadastro();
         
         })
-  })
+     })
