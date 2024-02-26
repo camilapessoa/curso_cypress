@@ -1,0 +1,106 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2024-02-26T14:29:14.767Z",
+    "end": "2024-02-26T14:29:22.055Z",
+    "duration": 7288,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "e45569b2-5d64-4543-808b-73da0555d1a3",
+      "title": "",
+      "fullFile": "cypress\\e2e\\perfil-nome.cy.js",
+      "file": "cypress\\e2e\\perfil-nome.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "2ce9c9bf-360f-492a-b353-92aea7ccd995",
+          "title": "Página de login",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Verificar se o usuário está logado",
+              "fullTitle": "Página de login Verificar se o usuário está logado",
+              "timedOut": null,
+              "duration": 5272,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.login('camila@exemplo.com', 'Senha123');\ncy.get('.header__user').click();\ncy.get('a[href*=\"/perfil\"]').click();\n// cy.contains('a', 'Ver Perfil').should('be.visible')\n// cy.get('.button').should('be.visible');\ncy.get('#nome').invoke('val').should('contain', 'camila');",
+              "err": {},
+              "uuid": "0b23fb19-cc2c-49ac-8f14-e288ed05251a",
+              "parentUUID": "2ce9c9bf-360f-492a-b353-92aea7ccd995",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "0b23fb19-cc2c-49ac-8f14-e288ed05251a"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 5272,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/results",
+        "overwrite": false,
+        "html": true,
+        "json": true,
+        "timestamp": "mmddyyyy_HHMMss"
+      },
+      "version": "6.2.0"
+    }
+  }
+}
