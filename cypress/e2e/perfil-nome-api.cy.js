@@ -1,5 +1,6 @@
 
 describe('Api Adopet', () => {
+  const tempoEsperado = Math.random() * 1000
   const authorization = `Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIwZGQ3ZWFkNi1lYjQxLTQ1ZGQtOGE3NS0wM2IwMjI4NWJiZTciLCJhZG9wdGVyTmFtZSI6ImNhbWlsYSIsImlhdCI6MTcwODk1NTE3OCwiZXhwIjoxNzA5MjE0Mzc4fQ.fdtfjYaan12Z7SOVU02rb_HpmXt76XbhZMszI1eVJc8`
   
   
@@ -13,7 +14,8 @@ describe('Api Adopet', () => {
                   expect(res.status).to.be.equal(200)
                   expect(res.body).is.not.empty
                   expect(res.body).to.have.property('perfil')
-              expect(res.body.perfil.nome).to.be.equal('camila') 
+              expect(res.body.perfil.nome).to.be.equal('camila')
+              expect(res.duration).to.be.lte(tempoEsperado) 
                  
               })
           })

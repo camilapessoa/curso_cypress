@@ -1,0 +1,110 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2024-02-26T15:02:01.229Z",
+    "end": "2024-02-26T15:02:32.588Z",
+    "duration": 31359,
+    "testsRegistered": 1,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "bb815335-07ca-417a-9075-b7c8a410770a",
+      "title": "",
+      "fullFile": "cypress\\e2e\\perfil-nome-api.cy.js",
+      "file": "cypress\\e2e\\perfil-nome-api.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "26e5d649-8e9a-4d7a-9446-edebc62f99a2",
+          "title": "Api Adopet",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Nome do perfil",
+              "fullTitle": "Api Adopet Nome do perfil",
+              "timedOut": null,
+              "duration": 31200,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.request({\n  method: 'GET',\n  url: 'https://adopet-api-i8qu.onrender.com/adotante/perfil/0dd7ead6-eb41-45dd-8a75-03b02285bbe7',\n  headers: {\n    authorization\n  }\n}).then(res => {\n  expect(res.status).to.be.equal(200);\n  expect(res.body).is.not.empty;\n  expect(res.body).to.have.property('perfil');\n  expect(res.body.perfil.nome).to.be.equal('camila');\n});",
+              "err": {
+                "message": "CypressError: `cy.request()` timed out waiting `30000ms` for a response from your server.\n\nThe request we sent was:\n\nMethod: GET\nURL: https://adopet-api-i8qu.onrender.com/adotante/perfil/0dd7ead6-eb41-45dd-8a75-03b02285bbe7\n\nNo response was received within the timeout.\n\nhttps://on.cypress.io/request",
+                "estack": "CypressError: `cy.request()` timed out waiting `30000ms` for a response from your server.\n\nThe request we sent was:\n\nMethod: GET\nURL: https://adopet-api-i8qu.onrender.com/adotante/perfil/0dd7ead6-eb41-45dd-8a75-03b02285bbe7\n\nNo response was received within the timeout.\n\nhttps://on.cypress.io/request\n    at <unknown> (http://localhost:62701/__cypress/runner/cypress_runner.js:133045:70)\n    at tryCatcher (http://localhost:62701/__cypress/runner/cypress_runner.js:1807:23)\n    at <unknown> (http://localhost:62701/__cypress/runner/cypress_runner.js:4186:41)\n    at tryCatcher (http://localhost:62701/__cypress/runner/cypress_runner.js:1807:23)\n    at Promise._settlePromiseFromHandler (http://localhost:62701/__cypress/runner/cypress_runner.js:1519:31)\n    at Promise._settlePromise (http://localhost:62701/__cypress/runner/cypress_runner.js:1576:18)\n    at Promise._settlePromise0 (http://localhost:62701/__cypress/runner/cypress_runner.js:1621:10)\n    at Promise._settlePromises (http://localhost:62701/__cypress/runner/cypress_runner.js:1697:18)\n    at _drainQueueStep (http://localhost:62701/__cypress/runner/cypress_runner.js:2407:12)\n    at _drainQueue (http://localhost:62701/__cypress/runner/cypress_runner.js:2400:9)\n    at Async._drainQueues (http://localhost:62701/__cypress/runner/cypress_runner.js:2416:5)\n    at Async.drainQueues (http://localhost:62701/__cypress/runner/cypress_runner.js:2286:14)\nFrom Your Spec Code:\n    at Context.eval (webpack://curso_cypress/./cypress/e2e/perfil-nome-api.cy.js:7:17)",
+                "diff": null
+              },
+              "uuid": "cfdd22ac-af66-4f21-ab50-2cd0445bc540",
+              "parentUUID": "26e5d649-8e9a-4d7a-9446-edebc62f99a2",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "cfdd22ac-af66-4f21-ab50-2cd0445bc540"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 31200,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/results",
+        "overwrite": false,
+        "html": true,
+        "json": true,
+        "timestamp": "mmddyyyy_HHMMss"
+      },
+      "version": "6.2.0"
+    }
+  }
+}

@@ -16,7 +16,7 @@ describe('Página de cadastro', () => {
             cy.get('[data-test="input-confirm-password"]').focus().clear().type(usuario.password);
             cy.get('[data-test="submit-button"]').click();
 
-            cy.wait(1000)
+            // cy.wait(1000)
 
         })
      })          

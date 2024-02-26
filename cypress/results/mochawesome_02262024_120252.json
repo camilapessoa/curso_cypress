@@ -1,0 +1,110 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2024-02-26T15:02:42.848Z",
+    "end": "2024-02-26T15:02:52.274Z",
+    "duration": 9426,
+    "testsRegistered": 1,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "4c5c9317-209b-47c0-bcf5-077d24525156",
+      "title": "",
+      "fullFile": "cypress\\e2e\\perfil-nome.cy.js",
+      "file": "cypress\\e2e\\perfil-nome.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "ca2d0bae-4877-43e1-9fce-92ca4a4480ed",
+          "title": "Página de login",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Verificar se o usuário está logado",
+              "fullTitle": "Página de login Verificar se o usuário está logado",
+              "timedOut": null,
+              "duration": 7347,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.login('camila@exemplo.com', 'Senha123');\ncy.get('.header__user').click();\ncy.get('a[href*=\"/perfil\"]').click();\n// cy.contains('a', 'Ver Perfil').should('be.visible')\n// cy.get('.button').should('be.visible');\ncy.get('#nome').invoke('val').should('contain', 'camila');",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `.header__user`, but never found it.",
+                "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `.header__user`, but never found it.\n    at Context.eval (webpack://curso_cypress/./cypress/e2e/perfil-nome.cy.js:44:9)",
+                "diff": null
+              },
+              "uuid": "ed650cde-1c8f-45dd-a826-9b7d9bc3b041",
+              "parentUUID": "ca2d0bae-4877-43e1-9fce-92ca4a4480ed",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "ed650cde-1c8f-45dd-a826-9b7d9bc3b041"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 7347,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/results",
+        "overwrite": false,
+        "html": true,
+        "json": true,
+        "timestamp": "mmddyyyy_HHMMss"
+      },
+      "version": "6.2.0"
+    }
+  }
+}
